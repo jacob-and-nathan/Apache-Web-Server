@@ -1,0 +1,155 @@
+body{
+    background-color: #FAFAFA;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #6A64FC;
+    width: 100%;
+    height: 120px;
+    font-size: 40px;
+    color: #F5F5F5;
+    padding-left: 40px;
+    box-sizing: border-box;
+    line-height: 120px;
+}
+
+#searchButton{
+    color: #8C8C8C;
+    font-size: 27px;
+    text-decoration: none;
+    padding-left: 40px;
+}
+
+@supports(position: fixed){
+    header{
+        position: fixed;
+        margin-top: -150px;
+    }
+    
+    #searchButton{
+        margin-top: 140px;
+    }
+}
+
+#searchButton:hover{
+    cursor: pointer;
+}
+
+.panel{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.panelText{
+    background-color: #FCB962;
+    margin-top: -4px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.panel img{
+    width: 100%;
+}
+
+.titleText{
+    font-size: 28px;
+}
+
+.contentText{
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+#download{
+    background-color: #E8E8E8;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#downloadButton{
+    padding: 17px;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+    
+    color: #EDEDED;
+    background-color: #61B74D;
+    
+    /*comment out to make the button look 'pressable'.*/opacity: 0.5;
+}
+
+@supports (display: grid){
+    #panelArea{
+        width: 95%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    
+    #panel1{
+        grid-column: 1/3;
+    }
+    
+    #panel1 .panelText{
+        height: 160px;
+    }
+    
+    .panel{
+        width: 100%;
+    }
+    
+    .panelText{
+        height: 210px;
+    }
+    
+    #panel3 .titleText{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 775px){
+    .titleText{
+        font-size: 23px;
+    }
+    
+    .contentText{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 615px){
+    #panelArea *{
+        grid-column: 1/3;
+    }
+    
+    header{
+        font-size: 30px;
+        position: static;
+        margin-top: 0px;
+    }
+    
+    #searchButton{
+        margin-top: 27px;
+    }
+    
+    #downloadButton{
+        font-size: 20px;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 615px) and (orientation: portrait){
+    header{
+        font-size: 25px;
+    }
+}
