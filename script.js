@@ -31,7 +31,7 @@ function myFunction () {
 		var searchTerm = document.getElementById("searchQuery").value;
 		var searchTerm = searchTerm.toUpperCase();
 		for (count = 0; count < websiteName.length; count ++) {
-			if (websiteDisplayName[count].includes(searchTerm) == true || description[count].includes(searchTerm) == true || url[count].includes(searchTerm) == true) {
+			if (websiteName[count].includes(searchTerm) == true || description[count].includes(searchTerm) == true || url[count].includes(searchTerm) == true) {
 				var resultFound = true;
 				var nameVariable = document.createElement("a");
 				nameVariable.innerHTML = websiteDisplayName[count];
