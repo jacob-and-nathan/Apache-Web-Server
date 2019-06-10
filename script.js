@@ -1,11 +1,11 @@
 //Please delete this line. I need it otherwise github will not add a empty line.
 //Sorry Nathan, but we will keep these lines for evermore
 
-var websiteDisplayName = ["Ultimate Painting", "Pythinium"]
-var websiteName = ["ULTIMATE PAINTING", "PYTHINIUM"]
-var descriptionDisplay = ["Learn Awesome painting techniques!", "Download our secure web browser!"]
-var description = ["LEARN AWESOME PAINTINGS TECHNIQUES!", "DOWNLOAD OUR SECURE WEB BROWSER!"]
-var url = ["./ultimatePainting/index.html", "./pythinium/index.html"]
+var websiteDisplayName = ["Ultimate Painting", "Pythinium", "Electron-o-verse"]
+var websiteName = ["ULTIMATE PAINTING", "PYTHINIUM", "ELECTRONOVERSE"]
+var descriptionDisplay = ["Learn Awesome painting techniques!", "Download our secure web browser!", "Learn everything form programming to electronics! All the tutorials at your fingertips!"]
+var description = ["LEARN AWESOME PAINTINGS TECHNIQUES!", "DOWNLOAD OUR SECURE WEB BROWSER!", "LEARN EVERYTHING FORM PROGRAMMING TO ELECTRONICS! ALL THE TUTORIALS AT YOUR FINGERTIPS!"]
+var url = ["./ultimatePainting/index.html", "./pythinium/index.html", "https://electronoverse.home.blog/"]
 var searchTerm = "xxx";
 var nameVariable = "xxx";
 var descriptionVariable = "xxx";
