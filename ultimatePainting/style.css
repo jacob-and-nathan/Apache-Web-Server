@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    background-color: #F2F6FC;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #343434;
+    min-width: 200px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-column-gap: 30px;
+}
+
+#menu{
+    background-color: #234985;
+    padding: 1vw;
+    grid-column: 1/3;
+}
+
+#menu > a{
+    color: #F2F6FC;
+    font-size: 3vw;
+    margin-left: 18vw;
+    text-decoration: none;
+    text-align: center;
+}
+
+#menu > a:hover{
+    text-decoration: underline;
+}
+
+#title{
+    background-color: #3267BC;
+    padding: 20px;
+    grid-column: 1/3;
+    color: #F2F6FC;
+    font-size: 4vw;
+}
+
+#main1{
+    background-color: #D4E0F4;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#main1 > a{
+    font-size: 2vw;
+}
+
+#main2{
+    width: 98%;
+    margin-top: 20px;
+    margin-right: 2%;
+}
+
+#main3{
+    background-color: #D4E0F4;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-column: 1/3;
+}
+
+.mainTitle{
+    font-size: 2.5vw;
+}
+
+.mainText{
+    font-size: 1.8vw;
+}
+
+#footer1{
+    background-color: #3267BC;
+    grid-column: 1/3;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 2vw;
+}
+
+#footer1 > a{
+    color: white;
+    font-size: 1.6vw;
+}
+
+#footer2{
+    background-color: #2D2D2D;
+    grid-column: 1/3;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 2vw;
+}
+
+/*Mobile*/
+@media (max-width: 600px){
+    #menu{
+        padding-bottom: 3vw;
+    }
+    
+    #menu > a{
+        display: block;
+        font-size: 8vw;
+        padding-top: 3vw;
+        margin-left: 6vw;
+        text-align: left;
+    }
+    
+    .wrapper > div, .wrapper > img{
+        grid-column: 1/3;
+    }
+    
+    #main1, #main2, #main3{
+        margin-left: 0px;
+        margin-right: 0px;
+        grid-column: 1/3;
+    }
+    
+    #main2{
+        width: 100%;
+    }
+    
+    .mainTitle{
+        font-size: 8vw;
+    }
+    
+    .mainText{
+        font-size: 5vw;
+    }
+    
+    #title{
+        font-size: 8vw;
+    }
+    
+    #footer1{
+        font-size: 6vw;
+    }
+    
+    #footer1 > a, #main1 > a{
+        font-size: 4.5vw;
+    }
+    
+    #footer2{
+        font-size: 5vw;
+    }
+    
+    @media (orientation:landscape){
+        #menu > a{
+            font-size: 4vw;
+        }
+        
+        #title{
+            font-size: 4vw;
+        }
+        
+        .mainTitle{
+            font-size: 4vw;
+        }
+        
+        .mainText{
+            font-size: 3vw;
+        }
+        
+        #footer1{
+            font-size: 3vw;
+        }
+        
+        #footer1 > a, #main1 > a{
+            font-size: 2.5vw;
+        }
+        
+        #footer2{
+            font-size: 2.5vw;
+        }
+    }
+}
