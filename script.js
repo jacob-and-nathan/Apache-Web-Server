@@ -1,1 +1,61 @@
-//Please delete this line. I need it because github will not add an empty file.
+//Please delete this line. I need it otherwise github will not add a empty line.
+//Sorry Nathan, but we will keep these lines for evermore
+
+var websiteDisplayName = ["Ultimate Painting", "Pythinium"]
+var websiteName = ["ULTIMATE PAINTING", "PYTHINIUM"]
+var descriptionDisplay = ["Learn Awesome painting techniques!", "Download our secure web browser!"]
+var description = ["LEARN AWESOME PAINTINGS TECHNIQUES!", "DOWNLOAD OUR SECURE WEB BROWSER!"]
+var url = ["./ultimatePainting/index.html", "./pythinium/index.html"]
+var searchTerm = "xxx";
+var nameVariable = "xxx";
+var descriptionVariable = "xxx";
+var count = 0;
+var resultFound = false;
+
+var element1 = document.getElementsByClassName("resultTitle");
+var element2 = document.getElementsByClassName("resultText");
+
+
+function myFunction () { 
+	if (event.keyCode==13) {
+
+		while (element1[0]) {
+    		element1[0].parentNode.removeChild(element1[0]);
+		}
+		
+		while (element2[0]) {
+    		element2[0].parentNode.removeChild(element2[0]);
+		}
+		var resultFound = false;
+		
+		var searchTerm = document.getElementById("searchQuery").value;
+		var searchTerm = searchTerm.toUpperCase();
+		for (count = 0; count < websiteName.length; count ++) {
+			if (websiteDisplayName[count].includes(searchTerm) == true || description[count].includes(searchTerm) == true || url[count].includes(searchTerm) == true) {
+				var resultFound = true;
+				var nameVariable = document.createElement("a");
+				nameVariable.innerHTML = websiteDisplayName[count];
+				nameVariable.className = "resultTitle";
+				nameVariable.href = url[count];
+
+
+				var descriptionVariable = document.createElement("P");
+				descriptionVariable.innerText = descriptionDisplay[count];
+				descriptionVariable.className = "resultText";
+
+				document.body.appendChild(nameVariable);
+				document.body.appendChild(descriptionVariable);
+
+				} else {
+					if (count+1 == websiteName.length) {
+						if (resultFound != true) { 
+							var descriptionVariable = document.createElement("P");
+							descriptionVariable.innerText = "Sorry, we couldn't find anything. Try using fewer words or searching for 'learn' or 'web'!";
+							descriptionVariable.className = "resultText";
+							document.body.appendChild(descriptionVariable);
+						}
+				}
+			}
+		}
+	}
+}
